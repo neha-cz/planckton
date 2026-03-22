@@ -156,12 +156,6 @@ jupyter notebook \
   --ServerApp.root_dir="$(pwd)"
 ```
 
-The script will:
-1. ✅ Check for virtual environment
-2. ✅ Activate the virtual environment
-3. ✅ Run Qiskit RAG setup (scrapes and indexes documentation)
-4. ✅ Start Jupyter Notebook server on port 8890
-
 ### 8. Access Planckton
 
 1. Open your browser to `http://localhost:8890`
@@ -194,27 +188,6 @@ response = openai.chat.completions.create(
 )
 ```
 
-
-### Project Structure
-
-```
-jupyter-planckton/
-├── app/                          # Jupyter Notebook app configuration
-├── notebook/                      # Notebook server code
-│   └── app.py                    # PlancktonHandler API endpoint
-├── packages/                      # JupyterLab extensions
-│   └── notebook-extension/       # Planckton extension
-│       ├── src/
-│       │   └── planckton.tsx     # React chat interface
-│       └── style/                # CSS styles
-├── qiskit_rag_system.py          # RAG system implementation
-├── qiskit_docs_scraper_linklist.py  # Documentation scraper
-├── setup_qiskit_rag_linklist.py  # Setup script
-├── run_planckton.sh              # Launch script
-├── requirements.txt              # Python dependencies
-└── package.json                  # JavaScript dependencies
-```
-
 ### Key Files
 
 - **Frontend**: `packages/notebook-extension/src/planckton.tsx` - React component for chat interface
@@ -222,23 +195,6 @@ jupyter-planckton/
 - **RAG System**: `qiskit_rag_system.py` - Documentation retrieval and search
 - **Scraper**: `qiskit_docs_scraper_linklist.py` - Qiskit documentation scraper
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Workflow
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Test thoroughly
-5. Commit your changes: `git commit -m 'Add amazing feature'`
-6. Push to the branch: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
-## License
-
-This project is licensed under the BSD-3-Clause License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -246,10 +202,3 @@ This project is licensed under the BSD-3-Clause License - see the [LICENSE](LICE
 - Powered by [OpenAI](https://openai.com/) GPT models
 - Quantum computing documentation from [Qiskit](https://qiskit.org/)
 
-## 📧 Support
-
-For issues, questions, or contributions, please open an issue on the GitHub repository.
-
----
-
-**Made with ❤️ for the quantum computing community**
